@@ -1,18 +1,5 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url(../fonts/Roboto-Regular.ttf)
-}
+@tailwind base;
 
-@import 'variables';
+@tailwind components;
 
-html {
-  font-size: $root-font-size;
-  font-family: $font-family;
-  max-width: $page-width;
-  margin: 0 auto;
-  text-align: center;
-}
-
-p {
-  font-size: $paragraph-font-size;
-}
+@tailwind utilities;

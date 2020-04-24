@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Scene from './js/Scene'
+import Page from './js/Page'
+import './styles/index.scss'
 
 const App = () => (
   <div>
-    <Scene />
+    <Page />
   </div>
 );
 
