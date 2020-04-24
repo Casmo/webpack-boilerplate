@@ -7,7 +7,7 @@ Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, React, Hot Module Replac
 ## Installation
 
 ```
-git clone git@github.com:casmo/webpack-boilerplate-react
+git clone git@github.com:casmo/webpack-boilerplate.git
 npm i
 ```
 
