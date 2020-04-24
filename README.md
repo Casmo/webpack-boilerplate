@@ -46,6 +46,8 @@ cd dist && http-server
 - [Sass](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
 - [ESLint](https://eslint.org/)
+- [tailwindcss](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
 
 ## Dependencies
 
