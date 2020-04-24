@@ -1,4 +1,5 @@
 const paths = require('./paths')
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -10,6 +11,13 @@ module.exports = {
    * The first place Webpack looks to start building the bundle.
    */
   entry: [paths.src + '/index.js'],
+
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.runtime.esm.js',
+      '@': path.resolve('src/'),
+    },
+  },
 
   /**
    * Output
@@ -74,7 +82,7 @@ module.exports = {
        * Use Babel to transpile JavaScript files.
        */
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
@@ -100,12 +108,23 @@ module.exports = {
        * Copy image files to build folder.
        */
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
         loader: 'file-loader',
         options: {
           name: '[path][name].[ext]',
           context: 'src', // prevent display of src/ in filename
         },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
 
       /**

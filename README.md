@@ -2,12 +2,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/david/dev/taniarascia/webpack-boilerplate)
 
-Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, Hot Module Replacement, and development/production optimization.
+Minimal Webpack 4 boilerplate with Babel, Sass, ESLint, React, Hot Module Replacement, and development/production optimization.
 
 ## Installation
 
 ```
-git clone git@github.com:taniarascia/webpack-boilerplate
+git clone git@github.com:casmo/webpack-boilerplate-react
 npm i
 ```
 
